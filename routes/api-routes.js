@@ -51,9 +51,16 @@ router.post("/api/workouts", (req, res) => {
 // getWorkoutsInRange() - GET
 router.get("/api/workouts/range", (req, res) => {
     console.log('******************************* getWorkoutsInRange() ******************************* ');
-    console.log('get("/api/workouts/range"');
     console.log('req.body: ', req.body);
-    res.send(req.body);
+    db.Workout.find({})
+        .populate('exercises')
+        .then(dbWorkout => {
+            console.log('dbWorkout: ', dbWorkout);
+            res.json(dbWorkout);
+        })
+        .catch(err => {
+            res.json(err);
+        });
 });
 
 
