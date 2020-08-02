@@ -8,7 +8,15 @@ const db = require("../models");
 router.get("/api/workouts", (req, res) => {
     console.log('get("/api/workouts"');
     console.log('req.body: ', req.body);
-    res.send(req.body);
+    db.Workout.find({})
+        //.populate('exercises')
+        .then(dbWorkout => {
+            console.log('dbWorkout: ', dbWorkout);
+            res.json(dbWorkout);
+        })
+        .catch(err => {
+            res.json(err);
+        });
 });
 
 // addExercise() - PUT
@@ -22,7 +30,13 @@ router.put("/api/workouts/", (req, res) => {
 router.post("/api/workouts", (req, res) => {
     console.log('post("/api/workouts"');
     console.log('req.body: ', req.body);
-    res.send(req.body);
+    db.Workout.create(req.body)
+        .then(dbWorkout => {
+            console.log('dbWorkout: ', dbWorkout);
+        })
+        .catch(({ message }) => {
+            console.log(message);
+        });
 });
 
 // getWorkoutsInRange() - GET
