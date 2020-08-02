@@ -122,7 +122,9 @@ async function handleFormSubmit(event) {
 function handleToastAnimationEnd() {
   toast.removeAttribute("class");
   if (shouldNavigateAway) {
-    location.href = "/";
+    
+    // The href property sets or returns the entire URL of the current page.
+    location.href = "/"; 
   }
 }
 

@@ -6,10 +6,11 @@ const db = require("../models");
 
 // getLastWorkout() - GET
 router.get("/api/workouts", (req, res) => {
+    console.log('getLastWorkout()');
     console.log('get("/api/workouts"');
     console.log('req.body: ', req.body);
     db.Workout.find({})
-        //.populate('exercises')
+        .populate('exercises')
         .then(dbWorkout => {
             console.log('dbWorkout: ', dbWorkout);
             res.json(dbWorkout);
@@ -20,14 +21,24 @@ router.get("/api/workouts", (req, res) => {
 });
 
 // addExercise() - PUT
-router.put("/api/workouts/", (req, res) => {
+router.put("/api/workouts/:id", ({ body }, res) => {
+    console.log('addExercise()');
     console.log('put("/api/workouts"');
-    console.log('req.body: ', req.body);
-    res.send(req.body);
+    console.log('body: ', body);
+    db.Exercise.create(body)
+        .then(({ _id }) => db.Workout.findOneAndUpdate({}, { $push: { exercises: _id } }, { new: true }))
+        .then(dbWorkout => {
+            console.log('dbWorkout: ', dbWorkout);
+            res.json(dbWorkout);
+        })
+        .catch(err => {
+            res.json(err);
+        });
 });
 
 // createWorkout() - POST
 router.post("/api/workouts", (req, res) => {
+    console.log('createWorkout()');
     console.log('post("/api/workouts"');
     console.log('req.body: ', req.body);
     db.Workout.create(req.body)
@@ -41,6 +52,7 @@ router.post("/api/workouts", (req, res) => {
 
 // getWorkoutsInRange() - GET
 router.get("/api/workouts/range", (req, res) => {
+    console.log('******************************* getWorkoutsInRange() ******************************* ');
     console.log('get("/api/workouts/range"');
     console.log('req.body: ', req.body);
     res.send(req.body);
