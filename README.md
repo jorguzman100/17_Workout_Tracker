@@ -1,6 +1,6 @@
 # Fitness Tracker
 
-The Fitness Tracker is a Full Stack Web Application which allow the user to register workouts and the related exercises. While keeping relevant information like duration, weight, duration, repetitions and distance, the app displays a useful dashboard to display the user's workouts progress.
+The Fitness Tracker is a Full Stack Web Application which allow the user to register workouts and the related exercises. The app keeps relevant information like duration, weight, repetitions and distance, in order to display a useful dashboard to show the user's workouts progress.
 
 ## Badges
 
