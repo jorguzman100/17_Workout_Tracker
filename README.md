@@ -1,51 +1,116 @@
-# Unit 17 Nosql Homework: Workout Tracker
+# Fitness Tracker
 
-For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
+The Fitness Tracker is a Full Stack Web Application which allow the user to register workouts and the related exercises. While keeping relevant information like duration, weight, duration, repetitions and distance, the app displays a useful dashboard to display the user's workouts progress.
 
-## User Story
+## Badges
 
-* As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
+Code quality and validation
 
-## Business Context
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/jorguzman100/17_Workout_Tracker.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/jorguzman100/17_Workout_Tracker/context:javascript)
+![shields.io](https://img.shields.io/github/languages/top/jorguzman100/17_Workout_Tracker)
+![shields.io](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fjorguzman100.github.io%2F17_Workout_Tracker%2F)
 
-A consumer will reach their fitness goals quicker when they track their workout progress.
+Repository Status
 
-## Acceptance Criteria
+![shields.io](https://img.shields.io/badge/Repo%20Status-Finished-brightgreen)
+![shields.io](https://img.shields.io/bitbucket/issues/jorguzman100/17_Workout_Tracker)
 
-When the user loads the page, they should be given the option to create a new workout, or continue with their last workout.
+License
 
-The user should be able to:
+![GitHub](https://img.shields.io/github/license/jorguzman100/17_Workout_Tracker)
 
-  * Add exercises to a previous workout plan.
+## Table of contents
 
-  * Add new exercises to a new workout plan.
+- [Fitness Tracker](#fitness-tracker)
+  - [Badges](#badges)
+  - [Table of contents](#table-of-contents)
+  - [The challenge](#the-challenge)
+  - [The development process](#the-development-process)
+  - [The Output](#the-output)
+  - [Installation and Usage](#installation-and-usage)
+  - [Credits, tools and other references](#credits-tools-and-other-references)
+  - [Contributing](#contributing)
+  - [Questions](#questions)
 
-  * View multiple the combined weight of multiple exercises on the `stats` page.
+## The challenge
 
-## Commit Early and Often
+From a provided front end code, the challenge is to create Mongo database with a Mongoose schema and handle routes with Express.
 
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
+Main elements:
 
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills
+- [x] MVC model application
+- [x] HTML, CSS, JS front end
+- [x] Chart.js Dashboard
+- [x] Mongo Database
+- [x] Mongoose Schema
+- [x] Express routing and server
 
-2. Your commit history allows you to revert your code base in the event that you need to return to a previous state
+## The development process
 
-Follow these guidelines for committing:
+In order to accomplish the challenge, the following steps were done:
 
-* Make single purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits
+1. Review the provided front end, its functionality and API requests.
+2. Research the Chart.js API
+3. Define the Mongoose models and schema.
+4. Build the server.
+5. Define the HTML and API routes.
+6. Final review and proper documentation.
 
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history
+## The Output
 
-* Don't commit half done work, for the sake of your collaborators (and your future self!)
+With the described process we were able to create a useful, efficient, responsive, and engaging application.
 
-* Test your application before you commit to ensure functionality at every step in the development process
+**User stories**
 
-We would like you to have well over 200 commits by graduation, so commit early and often!
+As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
 
-## Submission on BCS
+**The application**
 
-You are required to submit the following:
+![Screenshot1](./assets/images/screenshot1.png)
+![Screenshot2](./assets/images/screenshot2.png)
+![Screenshot3](./assets/images/screenshot3.png)
+![Screenshot4](./assets/images/screenshot4.png)
+![Screenshot5](./assets/images/screenshot5.png)
 
-* The URL to the deployed application
+## Installation and Usage
 
-* The URL to the Github repository
+The project was uploaded to [GitHub](https://github.com/) at the following repository:
+[https://github.com/jorguzman100/17_Workout_Tracker](https://github.com/jorguzman100/17_Workout_Tracker)
+
+You can access the deployed application with the Heroku link:
+[https://ancient-chamber-62452.herokuapp.com/](https://ancient-chamber-62452.herokuapp.com/)
+
+To install the project follow these steps:
+
+1. Clone the application from GitHub with:
+   - git clone [clone link from GitHub]
+2. From the root folder, install the dependencies with:
+   - npm install
+3. Run the app with:
+   - node server.js
+
+## Credits, tools and other references
+
+**Third Party Assets**
+
+[Chart.js](https://www.chartjs.org/)
+
+[CSS Materialize](https://materializecss.com/)
+
+[Bootstrap](https://getbootstrap.com/)
+
+[Shields.io](https://shields.io/)
+
+[LGTM](https://lgtm.com/)
+
+[Markup Validation Service](https://validator.w3.org/)
+
+## Contributing
+
+- Pull requests are welcome.
+- For major changes, please open an issue first to discuss what you would like to change.
+- Please make sure to update tests as appropriate.
+
+## Questions
+
+If you have questions or you want to share comments, we will be glad to hear from you. Please contact us at jorguzman100@gmail.com.
